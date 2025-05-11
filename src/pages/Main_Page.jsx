@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import EventTrackerPage from "./EventTrackerPage";
 import QuestionTrackerPage from "./QuestionTrackerPage";
+import Login from "./Login";
+import Signup from "./Signup";
 import Navbar from "../components/Navbar";
 import Calendar from "../components/Calendar";
 import ContestPopup from "../components/ContestPopup";
@@ -67,6 +69,24 @@ const Main_Page = () => {
                 isDarkMode={isDarkMode} 
                 isMenuOpen={isMenuOpen} 
                 onContestClick={setSelectedContest} 
+              />
+            } 
+          />
+          <Route 
+            path="/login" 
+            element={
+              <Login 
+                isDarkMode={isDarkMode} 
+                isMenuOpen={isMenuOpen} 
+              />
+            } 
+          />
+          <Route 
+            path="/signup" 
+            element={
+              <Signup
+                isDarkMode={isDarkMode} 
+                isMenuOpen={isMenuOpen} 
               />
             } 
           />
